@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Splitlyn – Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6B35D9;
+      --purple-dark: #4A1FA8;
+      --purple-light: #9B6BEF;
+      --purple-faint: #f0eaff;
+      --text: #1a1a2e;
+      --muted: #6b6b8a;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #faf9ff;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--purple);
+      background-image: radial-gradient(circle at 80% 20%, #9B6BEF 0%, transparent 50%),
+                        radial-gradient(circle at 10% 80%, #4A1FA8 0%, transparent 50%);
+      color: var(--white);
+      padding: 64px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      top: -80px; right: -60px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      bottom: -60px; left: -40px;
+    }
+
+    .app-icon {
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      font-weight: 300;
+      max-width: 400px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Main content */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* FAQ */
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 56px 0 24px;
+      color: var(--text);
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 12px rgba(107,53,217,0.06);
+      border: 1px solid rgba(107,53,217,0.08);
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+    }
+
+    .faq-item:hover { box-shadow: 0 4px 20px rgba(107,53,217,0.12); }
+
+    .faq-q {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-q span.arrow {
+      color: var(--purple);
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-a {
+      display: none;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .arrow { transform: rotate(180deg); }
+
+    /* Contact */
+    .contact-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(107,53,217,0.06);
+      border: 1px solid rgba(107,53,217,0.08);
+      margin-top: 16px;
+    }
+
+    .contact-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: var(--purple);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 16px rgba(107,53,217,0.3);
+    }
+
+    .email-btn:hover {
+      background: var(--purple-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(107,53,217,0.08);
+    }
+
+    footer a { color: var(--purple); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.2rem; }
+      .contact-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="app-icon">🧾</div>
+    <h1>Splitlyn</h1>
+    <p>Split bills with friends, track who owes what, and settle up in one tap.</p>
+  </div>
+
+  <div class="container">
+
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">How do I create a group? <span class="arrow">↓</span></div>
+      <div class="faq-a">Tap the + button on the home screen, give your group a name, and start adding members. You can invite friends to join via a shareable invite link.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">How do I invite someone to my group? <span class="arrow">↓</span></div>
+      <div class="faq-a">Open your group, tap the invite icon at the top right, and share the generated invite link with your friend. They can join directly from the link on their device.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">How does expense splitting work? <span class="arrow">↓</span></div>
+      <div class="faq-a">Add an expense, choose who paid, and Splitlyn automatically calculates each person's share. The "Who owes whom" section shows a clear breakdown of all balances.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">How do I mark a debt as settled? <span class="arrow">↓</span></div>
+      <div class="faq-a">In your group, find the person under "Who owes whom" and tap the Settle button next to their name. Confirm the settlement and it will be recorded in your Settlement History.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Will my data sync across devices? <span class="arrow">↓</span></div>
+      <div class="faq-a">Yes. Splitlyn uses iCloud to sync your groups and expenses across all your Apple devices automatically. Just make sure you're signed in with the same Apple ID.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">What does "Close Group" do? <span class="arrow">↓</span></div>
+      <div class="faq-a">Closing a group archives it once everything is settled. You'll get a full summary before archiving so nothing is left unsettled. Closed groups are kept for your records.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Is Splitlyn free? <span class="arrow">↓</span></div>
+      <div class="faq-a">Yes, Splitlyn is completely free to download and use.</div>
+    </div>
+
+    <h2 class="section-title">Contact Support</h2>
+
+    <div class="contact-card">
+      <div class="icon">💬</div>
+      <h3>Still need help?</h3>
+      <p>Can't find what you're looking for? Send us an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:support@splitlyn.app" class="email-btn">Email Support</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Splitlyn · <a href="mailto:support@splitlyn.app">support@splitlyn.app</a></p>
+  </footer>
+
+  <script>
+    function toggle(el) {
+      el.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
