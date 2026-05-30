@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Splitlyn – Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6B35D9;
+      --purple-dark: #4A1FA8;
+      --purple-light: #9B6BEF;
+      --purple-faint: #f0eaff;
+      --text: #1a1a2e;
+      --muted: #6b6b8a;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #faf9ff;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: var(--purple);
+      background-image: radial-gradient(circle at 80% 20%, #9B6BEF 0%, transparent 50%),
+                        radial-gradient(circle at 10% 80%, #4A1FA8 0%, transparent 50%);
+      color: var(--white);
+      padding: 64px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      top: -80px; right: -60px;
+    }
+
+    .app-icon {
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.85;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: var(--purple-faint);
+      color: var(--purple);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(107,53,217,0.06);
+      border: 1px solid rgba(107,53,217,0.08);
+    }
+
+    .section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .emoji {
+      font-size: 1.3rem;
+    }
+
+    .section p, .section li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .section li { margin-bottom: 6px; }
+
+    .highlight-box {
+      background: var(--purple-faint);
+      border-left: 3px solid var(--purple);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-top: 12px;
+      color: var(--purple-dark);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .contact-card {
+      background: var(--purple);
+      background-image: radial-gradient(circle at 90% 10%, #9B6BEF, transparent 60%);
+      border-radius: 20px;
+      padding: 36px;
+      text-align: center;
+      color: var(--white);
+      margin-top: 32px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--purple);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .email-btn:hover { transform: translateY(-1px); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(107,53,217,0.08);
+    }
+
+    footer a { color: var(--purple); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.9rem; }
+      .section { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="app-icon">🧾</div>
+    <h1>Privacy Policy</h1>
+    <p>Splitlyn · Shireesh Marla</p>
+  </div>
+
+  <div class="container">
+
+    <span class="last-updated">Last updated: May 2026</span>
+
+    <div class="section">
+      <h2><span class="emoji">👋</span> Overview</h2>
+      <p>Splitlyn is a bill-splitting app built for individuals and groups. This Privacy Policy explains what information we collect, how we use it, and your rights. We believe in keeping things simple and transparent — your privacy matters to us.</p>
+      <div class="highlight-box">
+        Splitlyn does not sell, rent, or share your personal data with any third parties for advertising or marketing purposes.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">📦</span> Information We Collect</h2>
+      <p>Splitlyn collects only the minimum data required to provide its core functionality:</p>
+      <ul>
+        <li><strong>Name</strong> — used to identify you within your groups and display your name to other group members.</li>
+        <li><strong>Apple ID / User ID</strong> — collected via Sign in with Apple for authentication purposes only.</li>
+        <li><strong>Group and expense data</strong> — the groups you create, members you add, expenses you log, and settlements you record. This data is stored in your private iCloud account.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">☁️</span> How We Store Your Data</h2>
+      <p>All your data is stored in your personal iCloud account using Apple's CloudKit framework. This means:</p>
+      <ul>
+        <li>Your data is private and stored in your own iCloud container.</li>
+        <li>Splitlyn does not operate its own servers or databases.</li>
+        <li>Your data is protected by Apple's security and encryption standards.</li>
+        <li>Data syncs across your Apple devices via iCloud automatically.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🔐</span> Sign in with Apple</h2>
+      <p>Splitlyn uses Sign in with Apple for authentication. Apple may provide us with a name and email address, but we only use this to create your in-app profile. We never store your Apple ID credentials. For more information, see <a href="https://www.apple.com/legal/privacy/" style="color: var(--purple);">Apple's Privacy Policy</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🚫</span> What We Don't Do</h2>
+      <ul>
+        <li>We do not collect location data.</li>
+        <li>We do not use analytics or tracking SDKs.</li>
+        <li>We do not show ads.</li>
+        <li>We do not sell your data to any third party.</li>
+        <li>We do not access your contacts, camera, or microphone.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">👶</span> Children's Privacy</h2>
+      <p>Splitlyn is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🔄</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Questions or concerns?</h3>
+      <p>If you have any questions about this Privacy Policy or how your data is handled, please get in touch.</p>
+      <a href="mailto:your@email.com" class="email-btn">Contact Us</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Splitlyn · Shireesh Marla · <a href="mailto:your@email.com">your@email.com</a> · <a href="./index.html">Support</a></p>
+  </footer>
+
+</body>
+</html>
